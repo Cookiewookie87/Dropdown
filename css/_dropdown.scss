@@ -1,10 +1,28 @@
-.dropdown-input{
-    background-color: gray;
+.dropdown{
+    position: relative;
+    .dropdown-input{
+        background-color: gray;
+        display:inline-block; //span is inline element, "height" property won't work. This will enable to set height and other 
+        width: 200px;
+        height: 44px;
+        cursor: pointer;
+    }
+    .dropdown-selection{
+        background-color: darkgrey;
+        display: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        width: 100%;
+        .dropdown-item{
+            cursor: pointer;
+            list-style: none;
+        }
+    }
+    .active{
+        display: inline-block;
+    }   
 }
-.dropdown-selection{
-    background-color: darkgrey;
-    display: none;
-}
-.active{
-    display: inline-block;
-}
+

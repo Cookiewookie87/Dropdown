@@ -1,13 +1,28 @@
-.dropdown-input {
-  background-color: gray;
+.dropdown {
+  position: relative;
 }
-
-.dropdown-selection {
+.dropdown .dropdown-input {
+  background-color: gray;
+  display: inline-block;
+  width: 200px;
+  height: 44px;
+  cursor: pointer;
+}
+.dropdown .dropdown-selection {
   background-color: darkgrey;
   display: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 100%;
 }
-
-.active {
+.dropdown .dropdown-selection .dropdown-item {
+  cursor: pointer;
+  list-style: none;
+}
+.dropdown .active {
   display: inline-block;
 }
 
