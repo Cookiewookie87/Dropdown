@@ -1,0 +1,8 @@
+@mixin type {
+    font: {
+        family: "Helvetica", "Arial";
+        size: 25px;
+        style: normal;
+    }
+    color: $white;
+}
