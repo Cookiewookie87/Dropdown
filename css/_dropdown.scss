@@ -1,5 +1,6 @@
 .dropdown{
     position: relative;
+    margin-top: 50px;
     .dropdown-input{
         background-color: gray;
         display:inline-block; //span is inline element, "height" property won't work. This will enable to set height and other 
@@ -15,7 +16,7 @@
         position: absolute;
         top: 44px;
         left: 0;
-        width: 100%;
+        z-index: 1;
         .dropdown-item{
             cursor: pointer;
             list-style: none;
