@@ -1,29 +1,61 @@
 .dropdown{
     position: relative;
     margin-top: 50px;
+    @include type();
     .dropdown-input{
         background-color: gray;
         display:inline-block; //span is inline element, "height" property won't work. This will enable to set height and other 
         width: 200px;
-        height: 44px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 10px 10px 10px 0;
+        position: relative;
+        color: $black;
+        background-color: transparent;
+        border-bottom: 1px solid $gray;
+        z-index: 2
+    }
+    &:after {
+        content: '▾';
+        color: $black;
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        z-index: 1;
     }
     .dropdown-selection{
-        background-color: darkgrey;
+        background-color: $white;
         display: none;
         padding: 0;
         margin: 0;
         position: absolute;
-        top: 44px;
+        top: 50px;
         left: 0;
-        z-index: 1;
+        z-index: 3;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 0px 7px 25px -4px rgba(15, 12, 41, 0.3);
         .dropdown-item{
             cursor: pointer;
             list-style: none;
+            color: $black;
+            padding: 10px;
+        }
+        :hover{
+            background-color: $light-blue;
+            color: $white;
+        }
+        :first-child:hover{
+            border-radius: 5px 5px 0 0;
+        }
+        :last-child:hover{
+            border-radius: 0 0 5px 5px;
         }
     }
     .active{
         display: inline-block;
     }   
 }
+
 

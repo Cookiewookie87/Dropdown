@@ -1,6 +1,7 @@
 let dropdownSelection = document.querySelectorAll(".dropdown-selection");
 let dropdownInput = document.querySelectorAll(".dropdown-input");
 let dropdownItem = document.querySelectorAll(".dropdown-item");
+let body = document.body;
 
 for (let j = 0; j < dropdownInput.length; j++) {
     
@@ -10,10 +11,9 @@ for (let j = 0; j < dropdownInput.length; j++) {
         
         dropdownSelection.forEach(function(item) {
             if (event.target.nextSibling.nextElementSibling !== item &&
-               item.classList.contains("active"))
-                {
+               item.classList.contains("active")) {
                     item.classList.remove("active")
-                }
+            }
             console.log(item.classList.contains("active"));
             console.log(event.target.nextElementSibling);
         });
