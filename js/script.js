@@ -27,7 +27,7 @@ for (let i = 0; i < dropdownItem.length; i++){
         event.target.parentElement.classList.remove("active");
         
         //For testing
-        //console.log(event.target.textContent);
-        //console.log(event.target.parentElement.previousSibling.previousSibling);
+        console.log(event.target.textContent);
+        console.log(event.target.parentElement.previousSibling.previousSibling);
     });
 }
